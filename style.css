@@ -1,0 +1,192 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+
+/* Reset default browser styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Styling for the main content area */
+#Content {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(45deg, rgba(0, 204, 255, 0.726), rgba(0, 110, 255, 0.836)), url(img.jpg);
+  background-blend-mode: overlay;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: auto;
+}
+
+/* Styling for the content wrapper */
+#ContentWrapper {
+  width: 450px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the question header */
+#ContentWrapper h2 {
+  font-size: 2rem;
+  padding: 10px 0;
+  color: dodgerblue;
+  text-shadow: 1px 1px 5px #b6b6b6;
+  text-align: center;
+}
+
+/* Styling for the options list */
+ul {
+  padding: 10px 20px;
+  margin: auto;
+}
+
+/* Styling for each option item */
+ul li {
+  list-style: none;
+  padding: 5px 0;
+  font-size: 1.1rem;
+}
+
+/* Styling for the radio buttons */
+ul li input {
+  cursor: pointer;
+}
+
+/* Styling for the submit button container */
+#SubmitButton {
+  text-align: center;
+}
+
+/* Styling for the submit button */
+#SubmitButton .btn {
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  display: inline-block;
+  min-width: 150px;
+  text-align: center;
+  margin: 10px auto;
+  background: dodgerblue;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+/* Styling for the submit button on focus */
+#SubmitButton .btn:focus {
+  transform: scale(1.1);
+  box-shadow: 1px 2px 10px #525252;
+}
+
+/* Styling for the submit button hover effect */
+#SubmitButton .btn:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00e1ff;
+  border-radius: 5px;
+  transition: 0.3s;
+  z-index: -1;
+  transform: translateX(-100%);
+}
+
+/* Styling for the submit button hover effect */
+#SubmitButton .btn:hover:before {
+  transform: translateX(0);
+}
+
+/* Styling for the score display area */
+#ShowScore {
+  width: 90%;
+  margin: 15px auto;
+  padding: 20px 10px;
+  background: rgba(207, 213, 215, 0.9);
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0px 2px 10px #424242;
+  text-align: left;
+}
+
+/* Styling for the question headers in the score area */
+#ShowScore h4 {
+  margin: 10px 0;
+}
+
+/* Styling for the text in the score area */
+#ShowScore p {
+  margin: 5px 0;
+}
+
+/* Styling for the timer display */
+#time {
+  font-size: 2rem;
+  color: red;
+}
+
+/* Hide score area initially */
+.ScoreArea {
+  display: none;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+  * {
+    cursor: default !important;
+  }
+  
+  #ContentWrapper {
+    width: 50vw !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  #SubmitButton .btn {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media screen and (max-width: 615px) {
+  #ContentWrapper {
+    width: 60vw !important;
+  }
+}
+
+@media screen and (max-width: 493px) {
+  #ContentWrapper {
+    width: 70vw !important;
+  }
+}
+
+@media screen and (max-width: 413px) {
+  #ContentWrapper {
+    width: 80vw !important;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  #ContentWrapper {
+    width: 90vw !important;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  #ContentWrapper {
+    width: 97vw !important;
+  }
+}
